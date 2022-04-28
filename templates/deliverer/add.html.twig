@@ -9,13 +9,16 @@
 </head>
 <body>
     <h1>Add new deliverer</h1>
+
+    {{ form(form) }}
+    <a class="btn btn-outline-danger" href="{{ path('show_all_deliverers') }}">Cancel</a>
     
-    <form style="margin-left: 15px" method="POST">
+    {# <form style="margin-left: 15px" method="POST">
         <div class="mx-auto d-flex flex-column justify-content-between" style="gap:10px; width: 200px">
         <input class="btn" type="text" name="deliverer_name" placeholder="Deliverer name"/>
         <input class="btn btn-outline-success" type="submit" name="add_deliverer" value="Add new deliverer" />
         <a class="btn btn-outline-danger" href="{{ path('show_all_deliverers') }}">Cancel</a>
         </div>
-    </form>
+    </form> #}
 </body>
 </html>

@@ -9,8 +9,11 @@
 </head>
 <body>
     <h1>Add new reservation</h1>
+
+    {{ form(form) }}
+    <a class="btn btn-outline-danger" href="{{ path('show_all_deliverers') }}">Cancel</a>
     
-    <form style="margin-left: 15px" method="POST">
+    {# <form style="margin-left: 15px" method="POST">
     <div class="mx-auto d-flex flex-column justify-content-between" style="gap:10px; width: 200px">
         <label for="deliverer"> Pick deliverer </label>
         <select class="btn btn-outline-secondary" name="deliverer">
@@ -27,6 +30,6 @@
         <input class="btn btn-outline-success" type="submit" name="add_reservation" value="Add new reservation" />
         <a class="btn btn-outline-danger" href="{{ path('show_all_deliverers') }}">Cancel</a>
     </div>
-    </form>
+    </form> #}
 </body>
 </html>

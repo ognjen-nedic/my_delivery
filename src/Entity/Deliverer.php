@@ -6,6 +6,7 @@ use App\Repository\DelivererRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: DelivererRepository::class)]
 #[ORM\Table(name: 'deliverers')]
@@ -17,6 +18,7 @@ class Deliverer
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\NotBlank(message: 'Name can\'t be empty.')]
     private $name;
 
     #[ORM\OneToMany(mappedBy: 'deliverer', targetEntity: Reservation::class)]
